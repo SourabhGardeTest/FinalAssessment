@@ -1,0 +1,39 @@
+{
+	"ValidSignIn": {
+		"Email": "mainhub@gmail.com",
+		"Password": "123456"
+	},
+	"ValidCouponLetters": {
+		"CouponCode": "qwertyfsdf"
+	},
+	"InValidCouponSpaces": {
+		"CouponCode": "      "
+	},
+	"InValidCouponBlank": {
+		"CouponCode": ""
+	},
+	"InValidCouponSpecialCharsOnly": {
+		"CouponCode": "#$%^&^@#"
+	},
+	"InValidCouponSpecialCharsAndLetters": {
+		"CouponCode": "D#$DFG%"
+	},
+	"InValidCouponSpecialCharsAndNumbers": {
+		"CouponCode": "#$%34%$"
+	},
+	"ValidCouponNumbers": {
+		"CouponCode": "3456654"
+	},
+	"ValidCouponNumbersSpacesAndLetters": {
+		"CouponCode": "345 fFG RT56"
+	},
+	"ValidCouponExisting": {
+		"CouponCode": "qwertyfsdf"
+	},
+	"InValidCouponInsufficient": {
+		"CouponCode": "qe"
+	},
+	"InValidCouponMorecharsThanLimit": {
+		"CouponCode": "qwertyertyuioytryuioouytryuiofghjkhgfhgjkhjgffsdf"
+	}
+}

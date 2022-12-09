@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="QuestionSix" verbose="1">
+	<test name="QuestionSix_TestCases">
+		<parameter name="browser" value="chrome"/>
+		<parameter name="url" value="https://products.pisystindia.com/Ecommerce/admin"/>
+		<classes>
+			<class name="TestCases_6.QuestionSix_TestCases"/>
+		</classes>
+	</test>
+</suite>
+

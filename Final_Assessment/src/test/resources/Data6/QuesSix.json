@@ -1,0 +1,10 @@
+{
+	"ValidSignIn": {
+		"Email": "admin@gmail.com",
+		"Password": "123456"
+	},
+	"ValidUpdateData": {
+		"CategoryName": "Food And Nutrients",
+		"NewImage" :"C:\\Users\\SG69837\\Downloads\\food.jfif"
+	}
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="QuestionFive" verbose="1">
+	<test name="QuestionFive_TestCases">
+		<parameter name="browser" value="chrome"/>
+		<parameter name="url" value="https://xlogist.pisystindia.com/mainhub/login"/>
+		<classes>
+			<class name="TestCases_5.QuestionFive_TestCases"/>
+		</classes>
+	</test>
+</suite>
+
