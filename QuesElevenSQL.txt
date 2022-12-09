@@ -1,0 +1,48 @@
+CREATE DATABASE Sourabh;
+SHOW DATABASES;
+create table Employee(Id Int,Name varchar(20),Designation Varchar(30),Salary int);
+insert into Employee(Id,Name,Designation,Salary) values(1,"Sourabh","Jr. Software Engineer",33333);
+insert into Employee(Id,Name,Designation,Salary) values(2,"Abhishek","Jr. Software Engineer",30333);  
+insert into Employee(Id,Name,Designation,Salary) values(3,"Shreyash","Jr. Software Engineer",43333);
+insert into Employee(Id,Name,Designation,Salary) values(6,"Pawan","Network Engineer",23333);
+Select * from Employee;
+Select * from Employee where Id>=2 && Id<=5;
+Select * from Employee ORDER By Salary ASC;
+Update Employee Set Salary = 48990 where Id=1;
+Select * from Employee;
+Delete from Employee where Name="Pawan";
+Select * from Employee;
+
+
+
+
+-----------------------------------------------------OUTPUT--------------------------------------------
+Database
+Sourabh
+information_schema
+mysql
+performance_schema
+sys
+test
+Id	Name	Designation	Salary
+1	Sourabh	Jr. Software Engineer	33333
+2	Abhishek	Jr. Software Engineer	30333
+3	Shreyash	Jr. Software Engineer	43333
+6	Pawan	Network Engineer	23333
+Id	Name	Designation	Salary
+2	Abhishek	Jr. Software Engineer	30333
+3	Shreyash	Jr. Software Engineer	43333
+Id	Name	Designation	Salary
+6	Pawan	Network Engineer	23333
+2	Abhishek	Jr. Software Engineer	30333
+1	Sourabh	Jr. Software Engineer	33333
+3	Shreyash	Jr. Software Engineer	43333
+Id	Name	Designation	Salary
+1	Sourabh	Jr. Software Engineer	48990
+2	Abhishek	Jr. Software Engineer	30333
+3	Shreyash	Jr. Software Engineer	43333
+6	Pawan	Network Engineer	23333
+Id	Name	Designation	Salary
+1	Sourabh	Jr. Software Engineer	48990
+2	Abhishek	Jr. Software Engineer	30333
+3	Shreyash	Jr. Software Engineer	43333
