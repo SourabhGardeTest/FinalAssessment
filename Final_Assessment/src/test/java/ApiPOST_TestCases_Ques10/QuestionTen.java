@@ -5,9 +5,7 @@ import static io.restassured.RestAssured.given;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.concurrent.TimeUnit;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.testng.annotations.AfterClass;
@@ -30,7 +28,7 @@ public class QuestionTen {
 	RequestSpecification reqSpecification;
 	
 	JSONObject jsonObj1;
-	String str="";
+	String str=" ";
 	
 	
 	@BeforeClass
@@ -40,7 +38,7 @@ public class QuestionTen {
 		respSpecification.statusLine("HTTP/1.1 200 OK");
 
 		respSpecification.contentType(ContentType.JSON);
-		ExtRepManager.createReport("API Report");
+		//ExtRepManager.createReport("API Report");
 
 		InputStream data = null;
 		try {
@@ -56,7 +54,7 @@ public class QuestionTen {
 	
 	@Test(priority = 1)
 	public void Valid_loginuser() {
-		ExtRepManager.startTest("TestCase_login");
+		//ExtRepManager.startTest("TestCase_login");
 		HashMap<String, String> params = new HashMap<String, String>();
 		String nmValue = jsonObj1.getJSONObject("Valid").getString("username");
 		String passValue = jsonObj1.getJSONObject("Valid").getString("password");
@@ -64,12 +62,15 @@ public class QuestionTen {
 		params.put("username", nmValue);
 		params.put("password", passValue);
 		RestAssured.baseURI = "https://arcadia.pisystindia.com/";
-		ExtRepManager.extTest.log(LogStatus.INFO, "Base url used:", RestAssured.baseURI);
-		ExtRepManager.extTest.log(LogStatus.INFO, "Header used:", "Authorization:" + str);
-		ExtRepManager.extTest.log(LogStatus.INFO, "Endpoint used:", "api/login");
-		ExtRepManager.extTest.log(LogStatus.INFO, "Expected content type:", ContentType.JSON.toString());
-		Response resp = given().when().contentType("application/json").body(params).post("api/login").then()
-				.contentType(ContentType.JSON).extract().response();
+		/*
+		 * ExtRepManager.extTest.log(LogStatus.INFO, "Base url used:",
+		 * RestAssured.baseURI); ExtRepManager.extTest.log(LogStatus.INFO,
+		 * "Header used:", "Authorization:" + str);
+		 * ExtRepManager.extTest.log(LogStatus.INFO, "Endpoint used:", "api/login");
+		 * ExtRepManager.extTest.log(LogStatus.INFO, "Expected content type:",
+		 * ContentType.JSON.toString());
+		 */
+		Response resp = given().when().contentType("application/json").body(params).post("api/login").then().contentType(ContentType.JSON).extract().response();
 		System.out.println("op is" + resp.asPrettyString());
 		LinkedHashMap<String, Object> payload = resp.body().jsonPath().get("payload");
 
@@ -79,7 +80,7 @@ public class QuestionTen {
 
 	@Test(priority = 2)
 	public void blank() {
-		ExtRepManager.startTest("TestCase_login");
+		//ExtRepManager.startTest("TestCase_login");
 		HashMap<String, String> params = new HashMap<String, String>();
 
 		String nmValue = jsonObj1.getJSONObject("blank").getString("username");
@@ -89,12 +90,15 @@ public class QuestionTen {
 		params.put("username", nmValue);
 		params.put("password", passValue);
 		RestAssured.baseURI = "https://arcadia.pisystindia.com/";
-		ExtRepManager.extTest.log(LogStatus.INFO, "Base url used:", RestAssured.baseURI);
-		ExtRepManager.extTest.log(LogStatus.INFO, "Header used:", "Authorization:" + str);
-		ExtRepManager.extTest.log(LogStatus.INFO, "Endpoint used:", "api/login");
-		ExtRepManager.extTest.log(LogStatus.INFO, "Expected content type:", ContentType.JSON.toString());
-		Response resp = given().when().contentType("application/json").body(params).post("api/login").then()
-				.contentType(ContentType.JSON).extract().response();
+		/*
+		 * ExtRepManager.extTest.log(LogStatus.INFO, "Base url used:",
+		 * RestAssured.baseURI); ExtRepManager.extTest.log(LogStatus.INFO,
+		 * "Header used:", "Authorization:" + str);
+		 * ExtRepManager.extTest.log(LogStatus.INFO, "Endpoint used:", "api/login");
+		 * ExtRepManager.extTest.log(LogStatus.INFO, "Expected content type:",
+		 * ContentType.JSON.toString());
+		 */
+		Response resp = given().when().contentType("application/json").body(params).post("api/login").then().contentType(ContentType.JSON).extract().response();
 		System.out.println("op is" + resp.asPrettyString());
 		LinkedHashMap<String, Object> payload = resp.body().jsonPath().get("payload");
 
@@ -106,11 +110,11 @@ public class QuestionTen {
 
 	@AfterMethod
 	public void tearDown() {
-		ExtRepManager.extReport.endTest(ExtRepManager.extTest);
+		//ExtRepManager.extReport.endTest(ExtRepManager.extTest);
 	}
 
 	@AfterClass
 	public void closeReport() {
-		ExtRepManager.extReport.flush();
+		//ExtRepManager.extReport.flush();
 	}
 }
