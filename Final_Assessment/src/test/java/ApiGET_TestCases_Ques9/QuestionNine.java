@@ -29,7 +29,7 @@ public class QuestionNine {
 	ResponseSpecification respSpecification;
 	RequestSpecification reqSpecification;
 	
-	String str="";
+	String str=" ";
 	
 	
 	@BeforeClass
